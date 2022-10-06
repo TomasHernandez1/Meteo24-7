@@ -1,0 +1,23 @@
+{
+    "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Meteo24h",
+        "description": "Il tuo servizio metereologico online, a portata di click",
+        "about": "Meteo mondiale",
+        "inLanguage" : "English",
+        "url" : "unimeteo.herokuapp.com",
+        "author": {
+          "@type" : "Person",
+          "name" : "Tomas Hernandez Trillo"
+        },
+        "publisher": {
+          "@type" : "CollegeOrUniversity",
+          "name" : "unimi"
+        },
+        "creator": {
+          "@type" : "Person",
+          "name" : "Tomas Hernandez Trillo"
+        },
+        "copyrightYear" : "2022",
+        "dateModified" : "13 September 2022"
+    }
