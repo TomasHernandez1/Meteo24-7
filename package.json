@@ -1,0 +1,18 @@
+{
+    "name": "meteo24h",
+    "version": "1.0.0",
+    "description": "Meteo24h, il meteo di tutto il mondo 24 ore su 24",
+    "author": "Tomas Hernandez",
+    "scripts": {
+      "start": "node app",
+      "dev": "nodemon app"
+    },
+    "dependencies": {
+      "ddos": "^0.2.1",
+      "dotenv": "^16.0.1",
+      "ejs": "^3.1.8",
+      "express": "^4.18.1",
+      "fs": "^0.0.1-security",
+      "node-fetch": "^2.6.7"
+    }
+  }
