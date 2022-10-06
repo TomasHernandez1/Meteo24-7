@@ -1,7 +1,7 @@
 {
-    "name": "meteo24h",
+    "name": "meteo24-7",
     "version": "1.0.0",
-    "description": "Meteo24h, il meteo di tutto il mondo 24 ore su 24",
+    "description": "Meteo24-7, il meteo di tutto il mondo 24 ore su 24",
     "author": "Tomas Hernandez",
     "scripts": {
       "start": "node app",
