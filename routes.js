@@ -95,6 +95,9 @@ router.get('/meteo', async (req,res) => {
       sunset: null
     })
   }
+  console.log("________________________________")
+  console.log(`${lat} , ${lon} , ${city}`)
+  console.log("_________________________________")
   var aq = await getAQ(lat,lon,process.env.API_KEY)
   var backgroundLink = await getImage(city,process.env.UNSPLASH_KEY)
   if(lat || lon && aq){
