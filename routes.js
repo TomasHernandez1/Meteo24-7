@@ -98,10 +98,11 @@ router.get('/meteo', async (req,res) => {
   console.log("________________________________")
   console.log(`${lat} , ${lon} , ${city}`)
   console.log("_________________________________")
-  var aq = await getAQ(lat,lon,"87c205e107e3628d816d5a5e5b9887e7")
+  var key = "87c205e107e3628d816d5a5e5b9887e7"
+  var aq = await getAQ(lat,lon,key)
   var backgroundLink = await getImage(city,process.env.UNSPLASH_KEY)
   if(lat || lon && aq){
-    const weatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely,hourly&appid=87c205e107e3628d816d5a5e5b9887e7`
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely,hourly&appid=${key}`
     try{
       await fetch(weatherUrl)
         .then(res => res.json())
