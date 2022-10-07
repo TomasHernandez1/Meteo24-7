@@ -237,3 +237,5 @@ router.get('/meteo', async (req,res) => {
     console.log("Errore nelle coordinate o nell'air quality index. CONTROLLARE API")
   }
 })
+
+module.exports = app;
