@@ -18,7 +18,7 @@ async function getImage (city,key) {
 }
 
 async function getAQ (lat,lon,key) {
-  const aqiUrl = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${process.env.API_KEY}`
+  const aqiUrl = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${key}`
   var aq
   try{
     await fetch(aqiUrl)
