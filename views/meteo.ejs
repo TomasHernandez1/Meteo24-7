@@ -20,7 +20,7 @@
   </head>
   <body style="background: url('<%= unsplash %>');background-repeat: no-repeat;background-size: cover;" >
     <!-- card meteo -->
-    <div id="card1" class="card">   
+    <div id="card" class="card">   
       <div class="search">
         <form action="/meteo" method="POST" id="req1">
           <input type="text" class="search-bar" id="search-bar" name="city" placeholder="Search" required>
@@ -77,7 +77,7 @@
       </div>
     </div>
 <!-- ___________________________________________________________________________________________ -->
-      <div id="card2" class="card">
+      <div id="card" class="card">
       <% if (min !== null && max !== null && imgtoday !== null) { %>
         <div class="days">
           <div class="day">
