@@ -1,0 +1,15 @@
+#map {
+	height: 50em;
+	margin-bottom: 30px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.owm-layercontrol-header {
+	font-size: larger;
+	font-weight: bold;
+	display: block;
+	position: relative;
+}
