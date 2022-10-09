@@ -56,7 +56,7 @@
           <% } %>
         </div>
         <% if(humidity !== null) { %>
-          <div class="humidity">Humidity: <%= humidity %> %</div>
+          <div class="humidity"><strong>Humidity: </strong><%= humidity %> %</div>
         <% } %>
         <% if(wind !== null) { %>
           <div class="wind">Wind speed: <%= wind %> km/h</div>
@@ -84,29 +84,24 @@
             <img src="<%= imgtoday %>" class="icon" loading="lazy" alt="icona meteo">
           </div>
           <div class="day">
-            <div><%= day1 %>:&nbsp;</div>
+            <div><%= day1 %>:&nbsp;<%= mintom %>° / <%= maxtom %>°</div>
             <img src="<%= imgtom %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= mintom %>° / <%= maxtom %>°</div>
           </div>
           <div class="day">
-            <div><%= day2 %>:&nbsp;</div>
+            <div><%= day2 %>:&nbsp;<%= mindayafter %>° / <%= maxdayafter %>°</div>
             <img src="<%= imgdayafter %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= mindayafter %>° / <%= maxdayafter %>°</div>
           </div>
           <div class="day">
-            <div><%= day3 %>:&nbsp;</div>
+            <div><%= day3 %>:&nbsp;<%= min3 %>° / <%= max3 %>°</div>
             <img src="<%= imgday3 %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= min3 %>° / <%= max3 %>°</div>
           </div>
           <div class="day">
-            <div><%= day4 %>:&nbsp;</div>
+            <div><%= day4 %>:&nbsp;<%= min4 %>° / <%= max4 %>°</div>
             <img src="<%= imgday4 %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= min4 %>° / <%= max4 %>°</div>
           </div>
           <div class="day">
-            <div><%= day5 %>:&nbsp;</div>
+            <div><%= day5 %>:&nbsp;<%= min5 %>° / <%= max5 %>°</div>
             <img src="<%= imgday5 %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= min5 %>° / <%= max5 %>°</div>
           </div>
         </div>
       <% } %>
