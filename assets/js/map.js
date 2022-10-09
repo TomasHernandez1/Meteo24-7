@@ -203,7 +203,7 @@ function initMap() {
 
 	// Get your own free OWM API key at https://www.openweathermap.org/appid - please do not re-use mine!
 	// You don't need an API key for this to work at the moment, but this will change eventually.
-	var OWM_API_KEY = '03c9e1565dbc510b2386c650a1c67da3';
+	var OWM_API_KEY = '06aac0fd4ba239a20d824ef89602f311';
 
 	var clouds = L.OWM.clouds({ opacity: 0.8, appId: OWM_API_KEY });
 	var precipitationcls = L.OWM.precipitationClassic({ opacity: 0.5, appId: OWM_API_KEY });
