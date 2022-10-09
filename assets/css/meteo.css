@@ -171,9 +171,10 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: gray;
+    background-color: black;
     color: white;
     text-align: center;
+    opacity: 0.7;
   }
   footer:hover{
     opacity: 0;
