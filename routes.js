@@ -47,7 +47,6 @@ router.get('/meteo', async (req,res) => {
   }
   const ipUrl = `http://ip-api.com/json/${ipAddr}`
   
-  var mappa = `https://tile.openweathermap.org/map/temp_new/worldwide.png?appid={API key}`
   var city, lat, lon
   try{
     await fetch (ipUrl)
