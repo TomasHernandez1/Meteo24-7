@@ -80,9 +80,8 @@
       <% if (min !== null && max !== null && imgtoday !== null) { %>
         <div class="days">
           <div class="day">
-            <div>Today:&nbsp;</div>
+            <div>Today:&nbsp; <%= min %>° / <%= max %>°</div>
             <img src="<%= imgtoday %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= min %>° / <%= max %>°</div>
           </div>
           <div class="day">
             <div><%= day1 %>:&nbsp;</div>
