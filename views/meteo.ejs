@@ -22,7 +22,7 @@
   </head>
   <body style="background: url('<%= unsplash %>');background-repeat: no-repeat;background-size: cover;" >
     <!-- card meteo -->
-    <div id="card" class="card">   
+    <div id="card1" class="card">   
       <div class="search">
         <form action="/meteo" method="POST" id="req1">
           <input type="text" class="search-bar" id="search-bar" name="city" placeholder="Search" required>
@@ -76,48 +76,50 @@
           <div class="sunset">Sunset: <%= sunset %></div>
         <% } %>
       </div>
-      <hr/>
+    </div>
+<!-- ___________________________________________________________________________________________ -->
+      <div id="card2" class="card">
       <% if (min !== null && max !== null && imgtoday !== null) { %>
         <div class="days">
-          <div class="flex">
+          <div class="day">
             <div>Today:&nbsp;</div>
             <img src="<%= imgtoday %>" class="icon" loading="lazy" alt="icona meteo">
             <div><%= min %>° / <%= max %>°</div>
           </div>
-          <div class="flex">
+          <div class="day">
             <div><%= day1 %>:&nbsp;</div>
             <img src="<%= imgtom %>" class="icon" loading="lazy" alt="icona meteo">
             <div><%= mintom %>° / <%= maxtom %>°</div>
           </div>
-          <div class="flex">
+          <div class="day">
             <div><%= day2 %>:&nbsp;</div>
             <img src="<%= imgdayafter %>" class="icon" loading="lazy" alt="icona meteo">
             <div><%= mindayafter %>° / <%= maxdayafter %>°</div>
           </div>
-          <div class="flex">
+          <div class="day">
             <div><%= day3 %>:&nbsp;</div>
             <img src="<%= imgday3 %>" class="icon" loading="lazy" alt="icona meteo">
             <div><%= min3 %>° / <%= max3 %>°</div>
           </div>
-          <div class="flex">
+          <div class="day">
             <div><%= day4 %>:&nbsp;</div>
             <img src="<%= imgday4 %>" class="icon" loading="lazy" alt="icona meteo">
             <div><%= min4 %>° / <%= max4 %>°</div>
           </div>
-          <div class="flex">
+          <div class="day">
             <div><%= day5 %>:&nbsp;</div>
             <img src="<%= imgday5 %>" class="icon" loading="lazy" alt="icona meteo">
             <div><%= min5 %>° / <%= max5 %>°</div>
           </div>
         </div>
       <% } %>
-      <footer class="mt-auto text-white-50" id="foot" >
-        <p>Hernandez Trillo Tomas - Università degli Studi di Milano</p>
-      </footer>
     </div>
     
-    <div id="map" class="flex"></div>
-    
+    <!--<div id="map" class="flex"></div>-->
+    <footer class="mt-auto text-white-50">
+        <p>Hernandez Trillo Tomas - Università degli Studi di Milano</p>
+    </footer>
+
     <script src="/js/darkMode.js"></script>
     <script src="/js/saveChoice.js"></script>
     <script src="/js/map.js"></script>
