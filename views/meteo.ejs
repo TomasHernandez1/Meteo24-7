@@ -31,7 +31,9 @@
             </path>
           </svg></button>
         </form>
-        <div class="switch-container">
+      </div>
+      <!-- switch dark mode -->
+      <div class="switch-container">
        <input type="checkbox" id="switch" />
        <label for="switch">
          <i class="fas fa-moon"></i>
@@ -39,8 +41,6 @@
          <span class="ball"></span>
        </label>
       </div>
-      </div>
-      
       <div class="weather">
         <% if(city !== null) { %>
           <h2 class="city">Weather in <%= city %></h2>
