@@ -20,6 +20,10 @@ body {
     margin-bottom: 10%;
     overflow: hidden;
   }
+#card{
+display: flex;
+    justify-content: center;
+}
 
   #day{
     display: flex;
