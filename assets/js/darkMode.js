@@ -1,6 +1,4 @@
 function setLight () {
-    document.getElementById('card2').style.backgroundColor = "rgba(255, 255, 255, 0.8)"
-    document.getElementById('card2').style.color = "black"
     document.getElementById('card').style.backgroundColor = "rgba(255, 255, 255, 0.8)"
     document.getElementById('card').style.color = "black"
     document.getElementById('search-bar').style.backgroundColor = "rgba(135, 135, 135, 0.7)"
@@ -8,8 +6,6 @@ function setLight () {
   }
   
   function setDark () {
-    document.getElementById('card2').style.backgroundColor = "#000000d0"
-    document.getElementById('card2').style.color = "white"
     document.getElementById('card').style.backgroundColor = "#000000d0"
     document.getElementById('card').style.color = "white"
     document.getElementById('search-bar').style.backgroundColor = "#7c7c7c2b"
