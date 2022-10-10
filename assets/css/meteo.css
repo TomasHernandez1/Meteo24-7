@@ -183,14 +183,14 @@ body{
 .date-container .date{
     font-size: 30px;
 }
-
+/*
 .place-container{
     text-align: end;
-}
+}*/
 
 .place-container .time-zone{
     font-size: 30px;
-    font-weight: 100;
+ /*   font-weight: 100; */
 }
 
 .place-container .country{
