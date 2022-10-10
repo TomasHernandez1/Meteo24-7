@@ -41,11 +41,11 @@
          <span class="ball"></span>
        </label>
       </div>
-      <div class="weather">
+      <div id="weather" class="weather">
         <% if(city !== null) { %>
           <h2 class="city">Weather in <%= city %></h2>
         <% } %>
-        <div class="flex">
+        <div id="oggi" class="flex">
           <% if(imgsrc !== null) { %>
             <img src="<%= imgsrc %>" alt="icona meteo" class="icon" loadin="lazy">
           <% } %>
