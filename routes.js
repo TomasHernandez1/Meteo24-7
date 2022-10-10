@@ -174,7 +174,7 @@ router.get('/meteo', async (req,res) => {
               mindayafter: data.daily[2].temp.min,
               maxdayafter: data.daily[2].temp.max,
               unsplash: backgroundLink,
-              day1: days[(date.getDay() + 1) % 7],
+              day1: days[(date.getDay()) % 7],
               day2: days[(date.getDay() + 2) % 7],
               day3: days[(date.getDay() + 3) % 7],
               imgday3: "https://openweathermap.org/img/w/" + data.daily[3].weather[0].icon + ".png",
