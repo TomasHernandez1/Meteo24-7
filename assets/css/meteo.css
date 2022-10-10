@@ -19,8 +19,11 @@ body {
     color: white;
     margin-bottom: 10%;
     overflow: hidden;
-    font-size: 110%;
   }
+
+#card{
+    font-size: 110%;
+}
 
   #day{
     display: flex;
