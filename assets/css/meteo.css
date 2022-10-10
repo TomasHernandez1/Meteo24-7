@@ -166,7 +166,7 @@ body{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 150px;
+    width: 250px;
 }
 .date-container{
     font-weight: 100;
