@@ -12,6 +12,8 @@
     <title>Meteo24/7 | Previsioni del tempo</title>
     <!-- collegamenti css --> 
     <link rel="stylesheet" href="/css/meteo.css">
+    <link rel="stylesheet" href="/css/map.css">
+    <link rel="stylesheet" href="/css/leaflet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
     <title>Meteo24/7 | <%= city %></title>
@@ -20,7 +22,7 @@
   </head>
   <body style="background: url('<%= unsplash %>');background-repeat: no-repeat;background-size: cover;" >
     <!-- card meteo -->
-    <div id="card" class="card">   
+    <div id="card1" class="card">   
       <div class="search">
         <form action="/meteo" method="POST" id="req1">
           <input type="text" class="search-bar" id="search-bar" name="city" placeholder="Search" required>
@@ -32,9 +34,8 @@
           </svg></button>
         </form>
       </div>
-      <!-- switch dark mode -->
       <div class="switch-container">
-       <input type="checkbox" id="switch" />
+       <input type="checkbox" id="switch"/>
        <label for="switch">
          <i class="fas fa-moon"></i>
          <i class="fas fa-sun"></i>
@@ -45,68 +46,73 @@
         <% if(city !== null) { %>
           <h2 class="city">Weather in <%= city %></h2>
         <% } %>
+        <% if(temp !== null) { %>
+          <h1 class="temp"><%= temp %> °</h1>
+        <% } %>
         <div class="flex">
           <% if(imgsrc !== null) { %>
             <img src="<%= imgsrc %>" alt="icona meteo" class="icon" loadin="lazy">
           <% } %>
           <% if(description !== null) { %>
-            <div id="weath" class="description"><%= description %></div>
+            <div class="description"><%= description %></div>
           <% } %>
         </div>
-        <% if(temp !== null) { %>
-          <h1 id="oggi" class="temp"><%= temp %> °</h1>
-        <% } %>      
         <% if(humidity !== null) { %>
-          <div class="humidity"><strong>Humidity: </strong><%= humidity %> %</div>
+          <div class="humidity">Humidity: <%= humidity %> %</div>
         <% } %>
         <% if(wind !== null) { %>
-          <div class="wind"><strong>Wind speed: </strong><%= wind %> km/h</div>
+          <div class="wind">Wind speed: <%= wind %> km/h</div>
         <% } %>
         <% if(feels !== null) { %>
-          <div class="feels"><strong>Feels like: </strong><%= feels %>°</div>
+          <div class="feels">Feels like: <%= feels %>°</div>
         <% } %>
         <% if(aq !== null) { %>
-          <div class="aq"><strong>Air quality: </strong><%= aq %></div>
+          <div class="aq">Air quality: <%= aq %></div>
         <% } %>
         <% if(sunrise !== null) { %>
-          <div class="sunrise"><strong>Sunrise: </strong><%= sunrise %></div>
+          <div class="sunrise">Sunrise: <%= sunrise %></div>
         <% } %>
         <% if(sunset !== null) { %>
-          <div class="sunset"><strong>Sunset: </strong><%= sunset %></div>
+          <div class="sunset">Sunset: <%= sunset %></div>
         <% } %>
       </div>
     </div>
-    
 <!-- ___________________________________________________________________________________________ -->
-      <div id="ff" class="card">
+      <div id="card2" class="card">
+      <% if (min !== null && max !== null && imgtoday !== null) { %>
         <div class="days">
-        <% if (min !== null && max !== null && imgtoday !== null) { %>
           <div class="day">
-            <div>Today:&nbsp; <%= min %>° / <%= max %>°</div>
+            <div>Today:&nbsp;</div>
             <img src="<%= imgtoday %>" class="icon" loading="lazy" alt="icona meteo">
+            <div><%= min %>° / <%= max %>°</div>
           </div>
           <div class="day">
-            <div><%= day1 %>:&nbsp;<%= mintom %>° / <%= maxtom %>°</div>
+            <div><%= day1 %>:&nbsp;</div>
             <img src="<%= imgtom %>" class="icon" loading="lazy" alt="icona meteo">
+            <div><%= mintom %>° / <%= maxtom %>°</div>
           </div>
           <div class="day">
-            <div><%= day2 %>:&nbsp;<%= mindayafter %>° / <%= maxdayafter %>°</div>
+            <div><%= day2 %>:&nbsp;</div>
             <img src="<%= imgdayafter %>" class="icon" loading="lazy" alt="icona meteo">
+            <div><%= mindayafter %>° / <%= maxdayafter %>°</div>
           </div>
           <div class="day">
-            <div><%= day3 %>:&nbsp;<%= min3 %>° / <%= max3 %>°</div>
+            <div><%= day3 %>:&nbsp;</div>
             <img src="<%= imgday3 %>" class="icon" loading="lazy" alt="icona meteo">
+            <div><%= min3 %>° / <%= max3 %>°</div>
           </div>
           <div class="day">
-            <div><%= day4 %>:&nbsp;<%= min4 %>° / <%= max4 %>°</div>
+            <div><%= day4 %>:&nbsp;</div>
             <img src="<%= imgday4 %>" class="icon" loading="lazy" alt="icona meteo">
+            <div><%= min4 %>° / <%= max4 %>°</div>
           </div>
           <div class="day">
-            <div><%= day5 %>:&nbsp;<%= min5 %>° / <%= max5 %>°</div>
+            <div><%= day5 %>:&nbsp;</div>
             <img src="<%= imgday5 %>" class="icon" loading="lazy" alt="icona meteo">
+            <div><%= min5 %>° / <%= max5 %>°</div>
           </div>
+        </div>
       <% } %>
-      </div>
     </div>
     
     <!--<div id="map" class="flex"></div>-->
@@ -116,6 +122,10 @@
 
     <script src="/js/darkMode.js"></script>
     <script src="/js/saveChoice.js"></script>
+    <script src="/js/map.js"></script>
+    <script src="/js/leaflet.js"></script>
+    <script src="/js/getMeteo.js"></script>
+    <script src="/js/leaflet-openweathermap.js"></script>
 
   </body>
 </html>
