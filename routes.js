@@ -46,7 +46,7 @@ router.get('/meteo', async (req,res) => {
     ipAddr = req.connection.remoteAddress;
   }
   const ipUrl = `http://ip-api.com/json/${ipAddr}`
-  
+
   var city, lat, lon
   try{
     await fetch (ipUrl)
@@ -143,7 +143,15 @@ router.get('/meteo', async (req,res) => {
           } else {
             const index = ["Good", "Fair", "Moderate", "Poor", "Very poor"]
             const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-            var date = new Date ()
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            const time = new Date()
+            const month = time.getMonth()
+            const date = time.getDate()
+            const day = time.getDay()
+            const hour = time.getHours()
+            const hoursIn12HrFormat = hour >= 13 ? hour %12: hour
+            const minutes = time.getMinutes()
+            const ampm = hour >=12 ? 'PM' : 'AM'
             var sunrise = new Date (data.current.sunrise * 1000)
             if(sunrise.getMinutes()<10){
               var sunrmin = '0' + sunrise.getMinutes()
@@ -158,6 +166,8 @@ router.get('/meteo', async (req,res) => {
             }
             res.render('meteo', {
               city: city,
+              date: time.getDate(),
+              month1: months[(time.getMonth() + 1)],
               temp: data.current.temp,
               description: data.current.weather[0].description,
               humidity: data.current.humidity,
