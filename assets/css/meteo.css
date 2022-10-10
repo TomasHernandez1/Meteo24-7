@@ -2,8 +2,7 @@
  /*search e nightmode*/
  .search{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
   }
   button {
     margin: 0.5em;
