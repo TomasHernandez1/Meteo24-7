@@ -12,8 +12,6 @@
     <title>Meteo24/7 | Previsioni del tempo</title>
     <!-- collegamenti css --> 
     <link rel="stylesheet" href="/css/meteo.css">
-    <link rel="stylesheet" href="/css/map.css">
-    <link rel="stylesheet" href="/css/leaflet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
     <title>Meteo24/7 | <%= city %></title>
@@ -21,8 +19,8 @@
     <link rel="icon" href="/img/logo.png" type="image/x-icon">
   </head>
   <body style="background: url('<%= unsplash %>');background-repeat: no-repeat;background-size: cover;" >
-    <!-- card meteo -->
-    <div id="card1" class="card">   
+    <!-- meteo -->
+    <div class="container">   
       <div class="search">
         <form action="/meteo" method="POST" id="req1">
           <input type="text" class="search-bar" id="search-bar" name="city" placeholder="Search" required>
@@ -35,97 +33,35 @@
         </form>
       </div>
       <div class="switch-container">
-       <input type="checkbox" id="switch"/>
+       <input type="checkbox" id="switch" />
        <label for="switch">
          <i class="fas fa-moon"></i>
          <i class="fas fa-sun"></i>
          <span class="ball"></span>
        </label>
       </div>
-      <div class="weather">
-        <% if(city !== null) { %>
-          <h2 class="city">Weather in <%= city %></h2>
-        <% } %>
-        <% if(temp !== null) { %>
-          <h1 class="temp"><%= temp %> °</h1>
-        <% } %>
-        <div class="flex">
-          <% if(imgsrc !== null) { %>
-            <img src="<%= imgsrc %>" alt="icona meteo" class="icon" loadin="lazy">
-          <% } %>
-          <% if(description !== null) { %>
-            <div class="description"><%= description %></div>
-          <% } %>
+      <div class="current-info">
+        <div class="date-container">
+            <div class="time" id="time">
+                12:30 <span id="am-pm">PM</span>
+            </div>
+            <div class="date" id="date">
+                Monday, 25 May
+            </div>
+            <div class="others" id="current-weather-items"></div>
         </div>
-        <% if(humidity !== null) { %>
-          <div class="humidity">Humidity: <%= humidity %> %</div>
-        <% } %>
-        <% if(wind !== null) { %>
-          <div class="wind">Wind speed: <%= wind %> km/h</div>
-        <% } %>
-        <% if(feels !== null) { %>
-          <div class="feels">Feels like: <%= feels %>°</div>
-        <% } %>
-        <% if(aq !== null) { %>
-          <div class="aq">Air quality: <%= aq %></div>
-        <% } %>
-        <% if(sunrise !== null) { %>
-          <div class="sunrise">Sunrise: <%= sunrise %></div>
-        <% } %>
-        <% if(sunset !== null) { %>
-          <div class="sunset">Sunset: <%= sunset %></div>
-        <% } %>
-      </div>
-    </div>
-<!-- ___________________________________________________________________________________________ -->
-      <div id="card2" class="card">
-      <% if (min !== null && max !== null && imgtoday !== null) { %>
-        <div class="days">
-          <div class="day">
-            <div>Today:&nbsp;</div>
-            <img src="<%= imgtoday %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= min %>° / <%= max %>°</div>
-          </div>
-          <div class="day">
-            <div><%= day1 %>:&nbsp;</div>
-            <img src="<%= imgtom %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= mintom %>° / <%= maxtom %>°</div>
-          </div>
-          <div class="day">
-            <div><%= day2 %>:&nbsp;</div>
-            <img src="<%= imgdayafter %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= mindayafter %>° / <%= maxdayafter %>°</div>
-          </div>
-          <div class="day">
-            <div><%= day3 %>:&nbsp;</div>
-            <img src="<%= imgday3 %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= min3 %>° / <%= max3 %>°</div>
-          </div>
-          <div class="day">
-            <div><%= day4 %>:&nbsp;</div>
-            <img src="<%= imgday4 %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= min4 %>° / <%= max4 %>°</div>
-          </div>
-          <div class="day">
-            <div><%= day5 %>:&nbsp;</div>
-            <img src="<%= imgday5 %>" class="icon" loading="lazy" alt="icona meteo">
-            <div><%= min5 %>° / <%= max5 %>°</div>
-          </div>
-        </div>
-      <% } %>
-    </div>
-    
-    <!--<div id="map" class="flex"></div>-->
-    <footer class="mt-auto text-white-50">
-        <p>Hernandez Trillo Tomas - Università degli Studi di Milano</p>
-    </footer>
 
+        <div class="place-container">
+            <div class="time-zone" id="time-zone">Asia/Kolkata</div>
+            <div id="country" class="country">IN</div>
+        </div>
+      </div>
+      <footer class="mt-auto text-white-50" id="foot" >
+        <p>Hernandez Trillo Tomas - Università degli Studi di Milano</p>
+      </footer>
+    </div>
+      
     <script src="/js/darkMode.js"></script>
     <script src="/js/saveChoice.js"></script>
-    <script src="/js/map.js"></script>
-    <script src="/js/leaflet.js"></script>
-    <script src="/js/getMeteo.js"></script>
-    <script src="/js/leaflet-openweathermap.js"></script>
-
   </body>
 </html>
