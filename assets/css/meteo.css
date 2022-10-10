@@ -173,11 +173,11 @@ body {
     opacity: 0;
   }
 
-weather{
+#weather{
     font-size:100%
 }
 
-oggi{
+#oggi{
     font-size:90%;
 }
 
