@@ -143,8 +143,7 @@ router.get('/meteo', async (req,res) => {
           } else {
             const index = ["Good", "Fair", "Moderate", "Poor", "Very poor"]
             const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            const date = new Date()
+            var date = new Date ()
             var sunrise = new Date (data.current.sunrise * 1000)
             if(sunrise.getMinutes()<10){
               var sunrmin = '0' + sunrise.getMinutes()
