@@ -43,18 +43,18 @@
       </div>
       <div class="weather">
         <% if(city !== null) { %>
-          <h2 id="weath" class="city">Weather in <%= city %></h2>
+          <h2 class="city">Weather in <%= city %></h2>
         <% } %>
         <div class="flex">
           <% if(imgsrc !== null) { %>
             <img src="<%= imgsrc %>" alt="icona meteo" class="icon" loadin="lazy">
           <% } %>
           <% if(description !== null) { %>
-            <div id="oggi" class="description"><%= description %></div>
+            <div id="weath" class="description"><%= description %></div>
           <% } %>
         </div>
         <% if(temp !== null) { %>
-          <h1 class="temp"><%= temp %> °</h1>
+          <h1 id="oggi" class="temp"><%= temp %> °</h1>
         <% } %>      
         <% if(humidity !== null) { %>
           <div class="humidity"><strong>Humidity: </strong><%= humidity %> %</div>
