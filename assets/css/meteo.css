@@ -161,6 +161,10 @@ body{
     padding: 20px 70px;
     color:#fff;
 }
+.w-icon{
+ height: 40px;
+ width: 40px;
+}
 
 .current-info{
     display: flex;
