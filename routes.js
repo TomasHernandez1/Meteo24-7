@@ -61,6 +61,7 @@ router.get('/meteo', async (req,res) => {
     res.render("meteo", {
       city: null,
       temp: null,
+      timezone: null,
       description: null,
       humidity: null,
       wind: null,
@@ -107,6 +108,7 @@ router.get('/meteo', async (req,res) => {
             res.render('meteo', {
               city: data.message,
               temp: null,
+              timezone: null,
               description: null,
               humidity: null,
               wind: null,
@@ -159,6 +161,7 @@ router.get('/meteo', async (req,res) => {
             res.render('meteo', {
               city: city,
               temp: data.current.temp,
+              timezone: data.timezone,
               description: data.current.weather[0].description,
               humidity: data.current.humidity,
               wind: data.current.wind_speed,
@@ -174,7 +177,7 @@ router.get('/meteo', async (req,res) => {
               mindayafter: data.daily[2].temp.min,
               maxdayafter: data.daily[2].temp.max,
               unsplash: backgroundLink,
-              day1: days[(date.getDay()) % 7],
+              day1: days[(date.getDay() + 1) % 7],
               day2: days[(date.getDay() + 2) % 7],
               day3: days[(date.getDay() + 3) % 7],
               imgday3: "https://openweathermap.org/img/w/" + data.daily[3].weather[0].icon + ".png",
@@ -200,6 +203,7 @@ router.get('/meteo', async (req,res) => {
         city: "Something went wrong with weather!",
         temp: null,
         description: null,
+        timezone: null,
         humidity: null,
         wind: null,
         imgsrc: null,
@@ -255,6 +259,7 @@ router.post('/meteo', async (req,res) => {
       res.render('meteo', {
         city: "Something went wrong with coordinates!",
         temp: null,
+        timezone: null,
         description: null,
         humidity: null,
         wind: null,
@@ -301,6 +306,7 @@ router.post('/meteo', async (req,res) => {
               res.render('meteo', {
                 city: data.message,
                 temp: null,
+                timezone: null,
                 description: null,
                 humidity: null,
                 wind: null,
@@ -353,6 +359,7 @@ router.post('/meteo', async (req,res) => {
               res.render('meteo', {
                 city: city,
                 temp: data.current.temp,
+                timezone: data.timezone,
                 description: data.current.weather[0].description,
                 humidity: data.current.humidity,
                 wind: data.current.wind_speed,
@@ -393,6 +400,7 @@ router.post('/meteo', async (req,res) => {
         res.render('meteo', {
           city: "Something went wrong with weather!",
           temp: null,
+          timezone: null,
           description: null,
           humidity: null,
           wind: null,
