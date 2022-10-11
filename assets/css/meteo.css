@@ -162,13 +162,14 @@ body{
 
 .container{
     padding: 20px 70px;
-    color:#fff;
+    color: #fff;
 }
 
 .current-info{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 40%;
 }
 .date-container{
     font-weight: 100;
