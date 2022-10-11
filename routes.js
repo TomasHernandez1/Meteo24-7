@@ -155,20 +155,9 @@ router.get('/meteo', async (req,res) => {
             const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
             var date = new Date ()
             var sunrise = new Date (data.current.sunrise * 1000)
-            if(sunrise.getMinutes()<10){
-              var sunrmin = '0' + sunrise.getMinutes()
-            } else {
-              var sunrmin = sunrise.getMinutes()
-            }
-            var sunset = new Date (data.current.sunset * 1000)
-            if(sunset.getMinutes()<10){
-              var sunsmin = '0' + sunset.getMinutes()
-            } else {
-              var sunsmin = sunset.getMinutes()
-            }
             res.render('meteo', {
               city: city,
-              country: data.sys.country,
+              //country: data.country,
               temp: data.current.temp,
               timezone: data.timezone,
               description: data.current.weather[0].description,
@@ -367,21 +356,9 @@ router.post('/meteo', async (req,res) => {
               const index = ["Good", "Fair", "Moderate", "Poor", "Very poor"]
               const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
               var date = new Date ()
-              var sunrise = new Date (data.current.sunrise * 1000)
-              if(sunrise.getMinutes()<10){
-                var sunrmin = '0' + sunrise.getMinutes()
-              } else {
-                var sunrmin = sunrise.getMinutes()
-              }
-              var sunset = new Date (data.current.sunset * 1000)
-              if(sunset.getMinutes()<10){
-                var sunsmin = '0' + sunset.getMinutes()
-              } else {
-                var sunsmin = sunset.getMinutes()
-              }
               res.render('meteo', {
               city: city,
-              country: data.sys.country,
+              //country: data.sys.country,
               temp: data.current.temp,
               timezone: data.timezone,
               description: data.current.weather[0].description,
