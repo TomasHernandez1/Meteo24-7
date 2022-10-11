@@ -15,6 +15,7 @@
     color: white;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    border: 1px solid #eee;
   }
   input.search-bar {
     border: none;
@@ -26,7 +27,8 @@
     font-family: inherit;
     font-size: 105%;
     width: calc(100% - 100px);
-    border: 1px solid #eee;
+    border: 1px solid #eee; 
+    margin-left: 15px;
   }
   button:hover {
     background: #7c7c7c6b;
