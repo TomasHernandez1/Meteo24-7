@@ -254,7 +254,6 @@ body{
     border-radius: 10px;
     background: rgba(0,0,0,0.2);
     height: 120%;
-    margin-bottom: 20%;
 }
 
 .future-forecast .today .day{
@@ -262,6 +261,7 @@ body{
     background: #3c3c44;
     border-radius: 50px;
     text-align: center;
+    margin-bottom: 20%;
 }
 
 .future-forecast .today .temp{
