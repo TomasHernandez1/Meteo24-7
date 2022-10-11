@@ -171,7 +171,7 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 15px;
-    width:40%;
+    width: 40%;
 }
 .date-container{
     font-weight: 100;
@@ -201,7 +201,8 @@ body{
     border: 1px solid #eee;
     height: 80px;
     margin-left: 160%;
-    margin-top: 1%;
+    margin-top: -50%;
+    z-index: 1;
 }
 
 .place-container .time-zone{
