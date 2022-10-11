@@ -190,7 +190,7 @@ body{
 
 .place-container{
     text-align: end;
-    display: flex;
+    display: absolute;
     flex-direction: column;
     background: rgba(24,24,27, 0.6);
     padding:20px;
@@ -218,6 +218,7 @@ body{
     border-radius: 10px;
     margin: 10px 0;
     border: 1px solid #eee;
+    width: 150px;
 }
 
 .current-info .others .weather-item{
