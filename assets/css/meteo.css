@@ -171,9 +171,11 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 15px;
+    width:130%;
 }
 .date-container{
     font-weight: 100;
+    width:130%;
 }
 .date-container .time{
     font-size: 70px;
@@ -218,7 +220,7 @@ body{
     border-radius: 10px;
     margin: 10px 0;
     border: 1px solid #eee;
-    width: 150px;
+    width: 130%;
 }
 
 .current-info .others .weather-item{
