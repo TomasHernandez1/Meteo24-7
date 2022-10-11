@@ -171,11 +171,11 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 15px;
-    width:130%;
+    width:30%;
 }
 .date-container{
     font-weight: 100;
-    width:130%;
+    width: 30%;
 }
 .date-container .time{
     font-size: 70px;
