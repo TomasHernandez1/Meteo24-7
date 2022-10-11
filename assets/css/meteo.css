@@ -240,7 +240,7 @@ body{
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
-    height: 30%;
+    height: 100%;
 }
 
 .future-forecast .today{
@@ -362,7 +362,7 @@ body{
 }
 
 .today{
- height: 30%
+ height: 120%
 }
 
 
