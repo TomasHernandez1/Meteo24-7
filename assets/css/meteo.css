@@ -27,8 +27,7 @@
     font-family: inherit;
     font-size: 105%;
     width: calc(100% - 100px);
-    border: 1px solid #eee; 
-    margin-left: 15px;
+    border: 1px solid #eee;
   }
   button:hover {
     background: #7c7c7c6b;
@@ -165,21 +164,14 @@ body{
     padding: 20px 70px;
     color:#fff;
 }
-.w-icon{
- height: 60px;
- width: 60px;
-}
 
 .current-info{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 15px;
-    width: 40%;
 }
 .date-container{
     font-weight: 100;
-    width: 40%;
 }
 .date-container .time{
     font-size: 70px;
@@ -196,17 +188,14 @@ body{
 
 .place-container{
     text-align: end;
-    display: absolute;
+    display: flex;
     flex-direction: column;
     background: rgba(24,24,27, 0.6);
-    padding: 20px;
+    padding:20px;
     border-radius: 10px;
     margin: 10px 0;
     border: 1px solid #eee;
     height: 80px;
-    margin-left: 220%;
-    margin-top: -40%;
-    z-index: 1;
 }
 
 .place-container .time-zone{
@@ -222,12 +211,11 @@ body{
 .current-info .others{
     display: flex;
     flex-direction: column;
-    padding: 20px;
     background: rgba(24,24,27, 0.6);
+    padding: 20px;
     border-radius: 10px;
-    margin: 5px 0;
+    margin: 10px 0;
     border: 1px solid #eee;
-    width: 130%;
 }
 
 .current-info .others .weather-item{
@@ -242,7 +230,7 @@ body{
     position: fixed;
     bottom: 0;
     display: flex;
-    color:white;
+    color: white;
     width: 100%;
     align-items: center;
     justify-content: center;
