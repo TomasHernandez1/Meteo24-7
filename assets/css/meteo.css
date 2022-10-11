@@ -251,7 +251,8 @@ body{
     padding:15px;
     padding-right: 40px;
     border-radius: 10px;
-    background: rgba(0,0,0,0.2)
+    background: rgba(0,0,0,0.2);
+    height: 30%;
 }
 
 .future-forecast .today .day{
