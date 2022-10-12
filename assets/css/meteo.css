@@ -366,6 +366,11 @@ body{
      width:0px;
      background: transparent
     }
+    
+    .future-forecast .today .temp{
+        padding-top:0
+    }
+ 
    
 }
 
