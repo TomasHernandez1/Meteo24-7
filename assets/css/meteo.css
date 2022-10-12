@@ -346,17 +346,24 @@ body{
 
 }
 
-@media only screen and (max-width: 1400px){
+@media only screen and (max-width: 400px){
     .future-forecast{
         justify-content: start;
         align-items: none;
         overflow-x: scroll;
     }
+   
+    .date-container{
+        width: 100%
+    }
+   
 }
 
 #current-weather-items{
  width: 100%;
 }
+
+
 
 .w-icon{
  height: 80px;
