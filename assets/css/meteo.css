@@ -354,6 +354,10 @@ body{
         overflow-y: clip
     }
    
+    #current-weather-item{
+     color: white !important
+    }
+ 
     .date-container{
         width: 100%
     }
