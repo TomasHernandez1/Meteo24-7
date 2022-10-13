@@ -308,7 +308,8 @@ body{
     .future-forecast{
         justify-content: start;
         align-items: none;
-        overflow-y: scroll;
+        overflow-x: scroll;
+        overflow-y: clip
     }
 
     .future-forecast .today .temp{
@@ -342,6 +343,19 @@ body{
 
     .current-info .others .weather-item{
         font-size: 14px;
+    } 
+ 
+    .date-container{
+        width: 100%
+    }
+ 
+    ::-webkit-scrollbar{
+     width:0px;
+     background: transparent
+    }
+    
+    .future-forecast .today .temp{
+        padding-top:0
     }
 
 }
