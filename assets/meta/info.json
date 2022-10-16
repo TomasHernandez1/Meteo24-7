@@ -1,11 +1,11 @@
 {
     "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Meteo24h",
-        "description": "Il tuo servizio metereologico online, a portata di click",
+        "name": "Meteo24-7",
+        "description": "real-time weather and forecasts from around the world.",
         "about": "Meteo mondiale",
         "inLanguage" : "English",
-        "url" : "unimeteo.herokuapp.com",
+        "url" : "meteo24-7.herokuapp.com",
         "author": {
           "@type" : "Person",
           "name" : "Tomas Hernandez Trillo"
@@ -19,5 +19,5 @@
           "name" : "Tomas Hernandez Trillo"
         },
         "copyrightYear" : "2022",
-        "dateModified" : "13 September 2022"
+        "dateModified" : "16 October 2022"
     }
