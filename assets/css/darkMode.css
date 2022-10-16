@@ -4,6 +4,7 @@ label {
     height: 25px;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 10%;
     padding: 0 5px;
     background: #333;
     border-radius: 50px;
