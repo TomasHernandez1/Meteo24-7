@@ -75,8 +75,9 @@ label {
     display: none;
   }
   .switch-container {
-    position: absolute;
-    margin-left: 24.5%;
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end
   }
   input:checked + label .fa-sun {
     transform: translateX(-43px) rotate(160deg);
