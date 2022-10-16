@@ -323,6 +323,7 @@ body{
     }
     .future-forecast .today{
         width:75%;
+        height: 100%;
         padding-right:0px;
         padding-left:0px
     }
