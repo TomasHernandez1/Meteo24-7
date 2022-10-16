@@ -17,6 +17,13 @@ function setLight () {
     document.getElementById('day4').style.color = "black"
     document.getElementById('day5').style.backgroundColor = "rgba(255, 255, 255, 0.8)"
     document.getElementById('day5').style.color = "black"
+    document.getElementById('d1').style.color = "black"
+    document.getElementById('d2').style.color = "black"
+    document.getElementById('d3').style.color = "black"
+    document.getElementById('d4').style.color = "black"
+    document.getElementById('d5').style.color = "black"
+    document.getElementById('d6').style.color = "black"
+    document.getElementById('d7').style.color = "black"
     document.getElementById('search-bar').style.backgroundColor = "rgba(135, 135, 135, 0.7)"
     document.getElementById('search').style.backgroundColor = "rgba(135, 135, 135, 0.7)"
   }
@@ -40,8 +47,15 @@ function setLight () {
     document.getElementById('day4').style.color = "white"
     document.getElementById('day5').style.backgroundColor = "#000000d0"
     document.getElementById('day5').style.color = "white"
-    document.getElementById('search-bar').style.backgroundColor = "#7c7c7c2b"
-    document.getElementById('search').style.backgroundColor = "#7c7c7c2b"
+    document.getElementById('d1').style.color = "white"
+    document.getElementById('d2').style.color = "white"
+    document.getElementById('d3').style.color = "white"
+    document.getElementById('d4').style.color = "white"
+    document.getElementById('d5').style.color = "white"
+    document.getElementById('d6').style.color = "white"
+    document.getElementById('d7').style.color = "white"
+    document.getElementById('search-bar').style.backgroundColor = "#000000d0"
+    document.getElementById('search').style.backgroundColor = "#000000d0"
   }
   
   document.addEventListener('DOMContentLoaded', function (){
