@@ -40,7 +40,7 @@ body {
 }
 
 .btn-lg{
-   transform: font-size 0.6s
+   transition: font-size 0.6s, transform 0.6s
 }
 .btn-lg:hover{
    font-size:150%
