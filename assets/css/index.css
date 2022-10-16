@@ -39,6 +39,13 @@ body {
   user-select: none;
 }
 
+.btn-lg{
+   transform: font-size 0.6s
+}
+.btn-lg:hover{
+   font-size:150%
+}
+
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
