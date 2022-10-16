@@ -93,6 +93,10 @@ body{
     font-weight: 100;
     width: 20%;
 }
+.date-container:hover{
+    animation-name: testo
+}
+  
 .date-container .time{
     font-size: 70px;
 }
