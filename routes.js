@@ -189,6 +189,8 @@ router.get('/meteo', async (req,res) => {
               max4: data.daily[4].temp.max,              
               min5: data.daily[5].temp.min,
               max5: data.daily[5].temp.max,
+              min6: data.daily[6].temp.min,
+              max6: data.daily[6].temp.max,
               imgtoday: "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".png",
               imgtom: "https://openweathermap.org/img/w/" + data.daily[1].weather[0].icon + ".png",
               imgdayafter: "https://openweathermap.org/img/w/" + data.daily[2].weather[0].icon + ".png",
@@ -203,8 +205,7 @@ router.get('/meteo', async (req,res) => {
               day4: days[(date.getDay() + 3) % 7],
               day5: days[(date.getDay() + 4) % 7],
               day6: days[(date.getDay() + 5) % 7],
-              day7: days[(date.getDay() + 6) % 7],              
-              
+              day7: days[(date.getDay() + 6) % 7],                           
               feels: data.current.feels_like, 
               sunrise: (sunrise.getHours()+2) + ":" + sunrmin,
               sunset: (sunset.getHours()+2) + ":" + sunsmin
@@ -406,6 +407,8 @@ router.post('/meteo', async (req,res) => {
                 max4: data.daily[4].temp.max,              
                 min5: data.daily[5].temp.min,
                 max5: data.daily[5].temp.max,
+                min6: data.daily[6].temp.min,
+                max6: data.daily[6].temp.max,
                 imgtoday: "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".png",
                 imgtom: "https://openweathermap.org/img/w/" + data.daily[1].weather[0].icon + ".png",
                 imgdayafter: "https://openweathermap.org/img/w/" + data.daily[2].weather[0].icon + ".png",
@@ -420,8 +423,7 @@ router.post('/meteo', async (req,res) => {
                 day4: days[(date.getDay() + 3) % 7],
                 day5: days[(date.getDay() + 4) % 7],
                 day6: days[(date.getDay() + 5) % 7],
-                day7: days[(date.getDay() + 6) % 7],              
-                
+                day7: days[(date.getDay() + 6) % 7],                             
                 feels: data.current.feels_like, 
                 sunrise: (sunrise.getHours()+2) + ":" + sunrmin,
                 sunset: (sunset.getHours()+2) + ":" + sunsmin
