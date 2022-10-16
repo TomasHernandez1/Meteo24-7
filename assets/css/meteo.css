@@ -225,7 +225,7 @@ body{
 
 @media only screen and  (max-width:1000px){
     *{
-         transition: none !important; 
+         transition: none; 
      }
  
     .container{
@@ -236,8 +236,10 @@ body{
         justify-content: start;
         align-items: none;
         overflow-x: scroll;
-        overflow-y: clip
+        overflow-y: clip;
+        transition: transform 0.7s
     }
+    
 
     .future-forecast .today .temp{
         font-size: 16px;
@@ -297,14 +299,15 @@ body{
 
 @media only screen and (max-width: 400px){
     *{
-         transition: none !important; 
+         transition: none; 
      }
  
     .future-forecast{
         justify-content: start;
         align-items: none;
         overflow-x: scroll;
-        overflow-y: clip
+        overflow-y: clip;
+        transition: transform 0.7s
     }
    
     #current-weather-item{
