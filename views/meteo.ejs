@@ -12,6 +12,7 @@
     <title>Meteo24/7 | Previsioni del tempo</title>
     <!-- collegamenti css --> 
     <link rel="stylesheet" href="/css/meteo.css">
+    <link rel="stylesheet" href="/css/darkMode.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
     <title>Meteo24/7 | <%= city %></title>
@@ -32,7 +33,7 @@
           </svg></button>
         </form>
       </div>
-      <!--
+      
       <div class="switch-container">
        <input type="checkbox" id="switch" />
        <label for="switch">
@@ -41,8 +42,8 @@
          <span class="ball"></span>
        </label>
       </div>
-      -->
-      <div class="current-info">
+    
+      <div class="current-info" id="current-info">
         <div class="date-container">
           <div class="others" id="current-weather-items">
           <div class="date" id="date"><%= day1 %></div><br>
@@ -135,5 +136,6 @@
     </div>
 
     <script src="/js/saveChoice.js"></script>
+    <script src="/js/darkMode.js"></script>
   </body>
 </html>
