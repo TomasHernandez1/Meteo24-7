@@ -68,14 +68,6 @@ footer:hover{
   padding:0;
 }
 
-@keyframes testo{
-    to{
-        width: 100%;
-        height: 100%;
-        font-size: 110%
-    }
-}
-
 body{
     background-repeat: no-repeat;
     background-size:cover;
@@ -134,7 +126,7 @@ body{
     font-weight: 700;
 }
 
-.current-info .others{
+.current-info .others::before{
     display: flex;
     flex-direction: column;
     background: rgba(24,24,27, 0.6);
@@ -143,11 +135,12 @@ body{
     margin: 10px 0;
     border: 1px solid #eee;
     height: 95%;
+    transition: transform 0.5 ease;
 }
 
-.current-info .others:hover{
-  animation-name: testo;
-  animation-duration: 1s
+.current-info .others:hover::before{
+    width: 110%;
+    height: 100%;
 }
 
 .current-info .others .weather-item{
