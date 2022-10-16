@@ -89,7 +89,7 @@ body{
 .date-container{
     font-weight: 100;
     width: 20%;
-    transition: font-size 1s, width 1s, transform 1s;
+    transition: font-size 0.7s, width 0.7s, transform 0.7s;
 }
 .date-container:hover{
     font-size:120%;
@@ -119,11 +119,11 @@ body{
     margin: 10px 0;
     border: 1px solid #eee;
     height: 80px;
-    transition: font-size 0.7s, width 0.7s, height 0.7s, transform 1s;
+    transition: font-size 0.7s, width 0.7s, height 0.7s, transform 0.7s;
 }
 .place-container:hover{
    font-size: 120%;
-   width:110%;
+   width:30%;
    height:110%
 }
 
