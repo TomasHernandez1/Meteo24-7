@@ -94,9 +94,6 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.date:hover{
-    animation-name: testo;
-}
 .date-container{
     font-weight: 100;
     width: 20%;
@@ -153,6 +150,7 @@ body{
 
 .current-info .others:hover{
   animation-name: testo;
+  animation-duration: infinite
 }
 
 .current-info .others .weather-item{
