@@ -136,6 +136,10 @@ body{
     height: 95%;
 }
 
+.current-info .others:hover{
+  font-size: 110%;
+}
+
 .current-info .others .weather-item{
     display: flex;
     justify-content: space-between;
