@@ -135,10 +135,10 @@ body{
     margin: 10px 0;
     border: 1px solid #eee;
     height: 95%;
-    transition: transform 2 ease;
+    transition: transform 2s ease;
 }
 
-.current-info .others:hover{
+.current-info:hover{
     font-size:110%
 }
 
