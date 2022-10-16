@@ -89,16 +89,9 @@ body{
 .date-container{
     font-weight: 100;
     width: 20%;
-    transition: transform 2s ease;
+    transition: font-size 2s, width 2s, transform 2s;
 }
 .date-container:hover{
-    font-size:120%;
-    width:22%
-}
-.date{
-    transition: transform 2s ease;
-}
-.date:hover{
     font-size:120%;
     width:22%
 }
