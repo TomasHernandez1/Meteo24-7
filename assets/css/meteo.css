@@ -1,10 +1,9 @@
-
- /*search e nightmode*/
- .search{
+.search{ 
     display: flex;
-    align-items: left;
-  }
-  button {
+    align-items: left
+}
+
+button {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
@@ -15,9 +14,10 @@
     color: white;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-    border: 1px solid #eee;
-  }
-  input.search-bar {
+    border: 1px solid #eee
+}
+
+input.search-bar {
     border: none;
     outline: none;
     padding: 0.4em 1em;
@@ -27,45 +27,41 @@
     font-family: inherit;
     font-size: 105%;
     width: calc(100% - 100px);
-    border: 1px solid #eee;
-  }
-  button:hover {
-    background: #7c7c7c6b;
-  }
+    border: 1px solid #eee
+}
+button:hover {background: #7c7c7c6b}
 ::placeholder{
- color: white;
- opacity: 0.7
+    color: white;
+    opacity: 0.7
 }
-  h1.temp {
+h1.temp { 
     margin: 0;
-    margin-bottom: 0.4em;
-  }
-  .flex {
+    margin-bottom: 0.4em
+}
+.flex {
     display: flex;
-    align-items: center;
-  }
-  .description {
+    align-items: center
+}
+.description {
     text-transform: capitalize;
-    margin-left: 8px;
-  }
+    margin-left: 8px
+}
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  opacity: 0.7;
-  font-size: 70%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 70%
 }
-footer:hover{
- opacity: 0;
-}
+footer:hover{opacity: 0}
 
 *{
-  box-sizing: border-box;
-  margin:0;
-  padding:0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
 }
 
 body{
@@ -73,41 +69,35 @@ body{
     background-size:cover;
     overflow:hidden;
     height: 100vh;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif
 }
 
 .container{
     padding: 20px 70px;
-    color: #fff;
+    color: #fff
 }
 
 .current-info{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 .date-container{
     font-weight: 100;
     width: 20%;
-    transition: font-size 0.7s, width 0.7s;
+    transition: font-size 0.7s, width 0.7s
 }
 .date-container:hover{
     font-size:120%;
     width:22%
-}
-  
-.date-container .time{
-    font-size: 70px;
-}
+} 
+.date-container .time{font-size: 70px}
 
 .date-container #am-pm{
     font-size: 30px;
-    margin-left: 20px;
+    margin-left: 20px
 }
-
-.date-container .date{
-    font-size: 30px;
-}
+.date-container .date{font-size: 30px}
 
 .place-container{
     text-align: end;
@@ -122,14 +112,11 @@ body{
 }
 
 
-.place-container .time-zone{
-    font-size: 30px;
- /*   font-weight: 100; */
-}
+.place-container .time-zone{font-size: 30px}
 
 .place-container .country{
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 700
 }
 
 .current-info .others{
@@ -140,12 +127,12 @@ body{
     border-radius: 10px;
     margin: 10px 0;
     border: 1px solid #eee;
-    height: 95%;
+    height: 95%
 }
 
 .current-info .others .weather-item{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 
@@ -161,12 +148,12 @@ body{
     justify-content: center;
     overflow-y: hidden;
     height: 30%;
-    transition: font-size 0.7s, height 0.7s;
+    transition: font-size 0.7s, height 0.7s
 }
 
 .future-forecast:hover{
     height: 40%;
-    font-size:100%
+    font-size: 100%
 }
 .future-forecast .today{
     display: flex;
@@ -178,7 +165,7 @@ body{
     padding-right: 40px;
     border-radius: 10px;
     background: rgba(0,0,0,0.2);
-    height: 110%;
+    height: 110%
 }
 
 .future-forecast .today .day{
@@ -186,17 +173,15 @@ body{
     background: #3c3c44;
     border-radius: 50px;
     text-align: center;
-    margin-bottom: 20%;
+    margin-bottom: 20%
 }
 
 .future-forecast .today .temp{
     font-size: 18px;
-    padding-top: 15px;
+    padding-top: 15px
 }
 
-.future-forecast .weather-forecast{
-    display: flex;
-}
+.future-forecast .weather-forecast{display: flex}
 
 .weather-forecast .weather-forecast-item{
     display: flex;
@@ -214,82 +199,54 @@ body{
     padding: 5px 15px;
     background: #3C3C44;
     border-radius: 50px;
-    text-align: center;
+    text-align: center
 }
 
 .weather-forecast .weather-forecast-item .temp{
     font-weight: 100;
-    font-size: 12px;
+    font-size: 12px
 }
 
+#current-weather-items{width: 100%;}
+
+.w-icon{
+    height: 80px;
+    width: 80px
+}
 
 @media only screen and  (max-width:1000px){
-    .container{
-        padding: 20px;
-    }
-    
+    .container{padding: 20px}   
     .future-forecast{
         justify-content: start;
         align-items: none;
         overflow-x: scroll;
         overflow-y: clip;
-    }
-    
-
-    .future-forecast .today .temp{
-        font-size: 16px;
-    }
-
-    .date-container .time{
-        font-size: 50px;
-    }
-
-    .date-container #am-pm{
-        font-size: 20px;
-    }
-
-    .date-container .date{
-        font-size: 20px;
-    }
-
+    }    
+    .date-container .time{font-size: 50px}
+    .date-container #am-pm{font-size: 20px}
+    .date-container .date{font-size: 20px}
     .place-container{
         text-align: end;
-        margin-top: 15px;
+        margin-top: 15px
     }
+    .place-container .time-zone{font-size: 20px}
+    .current-info .others{padding: 12px}
+    .current-info .others .weather-item{font-size: 14px} 
 
-    .place-container .time-zone{
-        font-size: 20px;
-    }
-
-    .current-info .others{
-        padding: 12px;
-    }
-
-    .current-info .others .weather-item{
-        font-size: 14px;
-    } 
- 
-    .date-container{
-        width: 100%;
-    } 
+    .date-container{width: 100%} 
     .date-container:hover{
         width: 100%;
-        font-size:100%
+        font-size: 100%
     } 
- 
     ::-webkit-scrollbar{
-     width:0px;
-     background: transparent
+        width:0px;
+        background: transparent
     }
-    
     .future-forecast .today .temp{
-        padding-top:0
-    }
-    
-    .today{
-        width: 140%
-    }
-
+        font-size: 16px;
+        padding-top: 0
+    } 
+    .today{width: 140%}
 }
 
 @media only screen and (max-width: 400px){
@@ -300,18 +257,12 @@ body{
         overflow-y: clip
     }
  
-    #current-weather-item{
-     color: white !important
-    }
- 
-    .date-container{
-        width: 100%;
-    } 
+    #current-weather-item{color: white !important}
+    .date-container{width: 100%} 
     .date-container:hover{
         width: 100%;
         font-size:100%
     } 
- 
     ::-webkit-scrollbar{
      width:0px;
      background: transparent
@@ -329,19 +280,8 @@ body{
         padding-top:70px;
         padding-bottom:50px
     }
-    .weather-forecast{
-        width:26% 
-    }
+    .weather-forecast{width:26%}
     
-}
-
-#current-weather-items{
- width: 100%;
-}
-
-.w-icon{
- height: 80px;
- width: 80px
 }
 
 
