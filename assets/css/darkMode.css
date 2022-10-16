@@ -1,0 +1,89 @@
+label {
+    display: flex;
+    width: 55px;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    background: #333;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+  }
+  label i {
+    font-size: 15px;
+  }
+  label .fa-sun {
+    color: gold;
+    transition: 0.3s;
+  }
+  label .fa-moon {
+    color: #fff;
+    transition: 0.3s;
+  }
+  label .ball {
+    display: none;
+  }
+  #switch:checked + label .fa-sun {
+    transform: translateX(-43px);
+  }
+  #switch:checked + label .fa-moon {
+    transform: translateX(43px);
+  }
+  label .fa-sun {
+    opacity: 1;
+  }
+  #switch:checked + label .fa-sun {
+    opacity: 0;
+  }
+  label .fa-moon {
+    opacity: 0;
+  }
+  #switch:checked + label .fa-moon {
+    opacity: 1;
+  }
+  label .ball {
+    position: absolute;
+    display: block;
+    width: 17px;
+    height: 17px;
+    top: 4px;
+    left: 5px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  #switch:checked + label .ball {
+    transform: translateX(40px);
+  }
+  label .fa-moon {
+    transform: translateX(43px);
+  }
+  #switch:checked + label .fa-moon {
+    transform: translateX(0);
+  }
+  label {
+    transition: 0.3s;
+  }
+  #switch:checked + label {
+    background-color: rgba(135,135,135,0.7);
+  }
+  #switch:checked + label .ball {
+    background: #222;
+  }
+  #switch {
+    display: none;
+  }
+  .switch-container {
+    position: absolute;
+    margin-left: 24.5%;
+  }
+  input:checked + label .fa-sun {
+    transform: translateX(-43px) rotate(160deg);
+  }
+  label .fa-moon {
+    transform: translateX(43px) rotate(250deg);
+  }
+  input:checked + label .fa-moon {
+    transform: translateX(0), rotate(0);
+  }
