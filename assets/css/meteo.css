@@ -68,6 +68,14 @@ footer:hover{
   padding:0;
 }
 
+@keyframes testo{
+    to{
+        width: 110%;
+        height: 110%;
+        font-size: 110%
+    }
+}
+
 body{
     background-repeat: no-repeat;
     background-size:cover;
@@ -94,7 +102,8 @@ body{
     width: 20%;
 }
 .date-container:hover{
-    animation-name: testo
+    animation-name: testo;
+    animation-duration: 5s
 }
   
 .date-container .time{
@@ -145,6 +154,7 @@ body{
 
 .current-info .others:hover{
   animation-name: testo;
+  animation-duration: 5s
 }
 
 .current-info .others .weather-item{
@@ -309,11 +319,6 @@ body{
     }
  
    
-}
-@keyframes testo{
-    to{
-        font-size: 110%;
-    }
 }
 
 #current-weather-items{
