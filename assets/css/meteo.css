@@ -271,10 +271,10 @@ body{
  
     .date-container{
         width: 100%;
-        transition: font-size 0.7s; 
+        transition: font-size 0s; 
     } 
     .date-container:hover{
-        font-size:120%
+        font-size:100%
     }
  
     ::-webkit-scrollbar{
@@ -287,7 +287,7 @@ body{
     }
     
     .today{
-        width: 120%
+        width: 140%
     }
 
 }
@@ -306,10 +306,10 @@ body{
  
     .date-container{
         width: 100%;
-        transition: font-size 0.7s; 
+        transition: font-size 0s; 
     } 
     .date-container:hover{
-        font-size:120%
+        font-size:100%
     }
     
  
@@ -323,7 +323,7 @@ body{
     }
  
     .today{
-        width: 120%
+        width: 140%
     }
    
 }
