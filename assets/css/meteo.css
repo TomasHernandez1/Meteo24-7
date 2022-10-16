@@ -299,10 +299,12 @@ body{
         align-items: none;
         overflow-x: scroll;
         overflow-y: clip;
-        transition: font-size 0.7s, width 0.7s;
-        width:140%
+        transition: font-size 0.7s;
+        width: 180%
     }
-   
+    .future-forecast:hover{
+     font-size:120%;    
+ }
     #current-weather-item{
      color: white !important
     }
