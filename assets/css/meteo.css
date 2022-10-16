@@ -119,10 +119,12 @@ body{
     margin: 10px 0;
     border: 1px solid #eee;
     height: 80px;
-    transition: font-size 1s, transform 1s;
+    transition: font-size 0.7s, width 0.7s, height 0.7s, transform 1s;
 }
 .place-container:hover{
-   font-size: 120%
+   font-size: 120%;
+   width:110%;
+   height:110%
 }
 
 .place-container .time-zone{
