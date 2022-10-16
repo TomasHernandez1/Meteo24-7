@@ -4,7 +4,7 @@
     <!-- metadati -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Meteo24/7, meteo e previsioni del tempo di tutto il mondo.">
+    <meta name="description" content="Meteo24/7, weather forecasts from all around the world.">
     <meta name="keywords" content="Meteo, Città, Previsioni, Clima, Tempo, Temperatura, Precipitazioni, Weather, City, Rainfall, Temperature, Forecast">
     <meta name="author" content="Tomas Hernandez, Università degli Studi di Milano">
     <link href="/meta/schema.json" type="application/ld+json" rel="alternate">
@@ -20,8 +20,9 @@
     <link rel="icon" href="/img/logo.png" type="image/x-icon">
   </head>
   <body style="background: url('<%= unsplash %>');background-repeat: no-repeat;background-size: cover;" >
-    <!-- meteo -->
+    <!-- container -->
     <div class="container">   
+      <!-- barra di ricerca -->
       <div class="search">
         <form action="/meteo" method="POST" id="req1">
           <input type="text" class="search-bar" id="search-bar" name="city" placeholder="Search" required>
@@ -33,7 +34,7 @@
           </svg></button>
         </form>
       </div>
-      
+      <!-- toggle dark mode -->
       <div class="switch-container">
        <input type="checkbox" id="switch" />
        <label for="switch">
@@ -42,46 +43,46 @@
          <span class="ball"></span>
        </label>
       </div>
-    
+      <!-- info giorno -->
       <div class="current-info">
         <div class="date-container">
           <div class="others" id="current-weather-items">
-          <div class="date" id="date"><%= day1 %></div><br>
-            <div class="weather-item">
-                <div>Humidity</div>
-                <div><%= humidity %>%</div>
-            </div>
-            <div class="weather-item">
-                <div>Weather</div>
-                <div><%= description %></div>
-            </div>
-            <div class="weather-item">
-                <div>Wind Speed</div>
-                <div><%= wind %> Km/h</div>
-            </div>
-        
-            <div class="weather-item">
-                <div>Sunrise</div>
-                <div><%= sunrise %> AM</div>
-            </div>
-            <div class="weather-item">
-                <div>Sunset</div>
-                <div><%= sunset %> PM</div>
-            </div>
-            <div class="weather-item">
-                <div>Feels like</div>
-                <div><%= feels %> °C</div>
-            </div>
+            <!-- oggi -->
+            <div class="date" id="date"><%= day1 %></div><br>
+              <div class="weather-item">
+                  <div>Humidity</div>
+                  <div><%= humidity %>%</div>
+              </div>
+              <div class="weather-item">
+                  <div>Weather</div>
+                  <div><%= description %></div>
+              </div>
+              <div class="weather-item">
+                  <div>Wind Speed</div>
+                  <div><%= wind %> Km/h</div>
+              </div>         
+              <div class="weather-item">
+                  <div>Sunrise</div>
+                  <div><%= sunrise %> AM</div>
+              </div>
+              <div class="weather-item">
+                  <div>Sunset</div>
+                  <div><%= sunset %> PM</div>
+              </div>
+              <div class="weather-item">
+                  <div>Feels like</div>
+                  <div><%= feels %> °C</div>
+              </div>
             </div>
         </div>
-
+        <!-- div a destra, città e fuso-orario-->
         <div class="place-container" id="place-container">
             <div class="time-zone" id="time-zone"><%= city %></div>
             <div id="country" class="country"><%= timezone %></div>
         </div>
       </div>
     </div> 
-      
+    <!-- oggi -->  
     <div class="future-forecast">
       <div class="today" id="current-temp">
           <img src="<%= imgtoday %>" alt="weather icon" class="w-icon">
@@ -91,7 +92,7 @@
               <div class="temp">Temp max - <%= max %>&#176; C</div>
           </div>
       </div>
-
+      <!-- prossimi giorni -->
       <div class="weather-forecast" id="weather-forecast">
           <div class="weather-forecast-item" id="today">
               <div class="day" id="d2"><%= day2 %></div>
@@ -130,11 +131,12 @@
               <div class="temp">Max - <%= max6 %>&#176; C</div>
           </div>
       </div>
+      <!-- footer -->
       <footer>
         <p>Hernandez Trillo Tomas - Università degli Studi di Milano</p>
       </footer>
     </div>
-
+    <!-- collegamenti js -->
     <script src="/js/saveChoice.js"></script>
     <script src="/js/darkMode.js"></script>
   </body>
