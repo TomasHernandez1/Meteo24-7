@@ -103,7 +103,6 @@ body{
 }
 .date-container:hover{
     animation-name: testo;
-    animation-duration: 5s
 }
   
 .date-container .time{
@@ -154,7 +153,6 @@ body{
 
 .current-info .others:hover{
   animation-name: testo;
-  animation-duration: 5s
 }
 
 .current-info .others .weather-item{
