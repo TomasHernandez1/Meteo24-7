@@ -135,12 +135,11 @@ body{
     margin: 10px 0;
     border: 1px solid #eee;
     height: 95%;
-    transition: transform 0.5 ease;
+    transition: transform 2 ease;
 }
 
 .current-info .others:hover{
-    width: 110%;
-    height: 100%;
+    font-size:110%
 }
 
 .current-info .others .weather-item{
