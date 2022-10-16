@@ -271,11 +271,8 @@ body{
  
     .date-container{
         width: 100%;
-        transition: font-size 0s; 
+        transition: none !important; 
     } 
-    .date-container:hover{
-        font-size:100%
-    }
  
     ::-webkit-scrollbar{
      width:0px;
@@ -306,12 +303,8 @@ body{
  
     .date-container{
         width: 100%;
-        transition: font-size 0s; 
+        transition: none !important; 
     } 
-    .date-container:hover{
-        font-size:100%
-    }
-    
  
     ::-webkit-scrollbar{
      width:0px;
