@@ -150,7 +150,7 @@ body{
 
 .current-info .others:hover{
   animation-name: testo;
-  animation-duration: infinite
+  animation-duration: 5s
 }
 
 .current-info .others .weather-item{
