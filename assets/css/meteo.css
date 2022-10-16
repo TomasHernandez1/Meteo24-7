@@ -270,7 +270,11 @@ body{
     } 
  
     .date-container{
-        width: 100%
+        width: 100%;
+        transition: font-size 0.7s; 
+    } 
+    .date-container:hover{
+        font-size:120%
     }
  
     ::-webkit-scrollbar{
@@ -280,6 +284,10 @@ body{
     
     .future-forecast .today .temp{
         padding-top:0
+    }
+    
+    .today{
+        width: 120%
     }
 
 }
@@ -297,8 +305,13 @@ body{
     }
  
     .date-container{
-        width: 100%
+        width: 100%;
+        transition: font-size 0.7s; 
+    } 
+    .date-container:hover{
+        font-size:120%
     }
+    
  
     ::-webkit-scrollbar{
      width:0px;
@@ -309,6 +322,9 @@ body{
         padding-top:0
     }
  
+    .today{
+        width: 120%
+    }
    
 }
 
