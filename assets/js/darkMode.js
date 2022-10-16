@@ -17,12 +17,7 @@ function setLight () {
     document.getElementById('day4').style.color = "black"
     document.getElementById('day5').style.backgroundColor = "rgba(255, 255, 255, 0.6)"
     document.getElementById('day5').style.color = "black"
-    document.getElementById('d1','d2').style.color = "white"
-    document.getElementById('d3').style.color = "white"
-    document.getElementById('d4').style.color = "white"
-    document.getElementById('d5').style.color = "white"
-    document.getElementById('d6').style.color = "white"
-    document.getElementById('d7').style.color = "white"
+    document.getElementById('d1','d2','d3','d4','d5','d6','d7').style.color = "white"
     document.getElementById('search-bar').style.backgroundColor = "rgba(135, 135, 135, 0.7)"
     document.getElementById('search').style.backgroundColor = "rgba(135, 135, 135, 0.7)"
   }
