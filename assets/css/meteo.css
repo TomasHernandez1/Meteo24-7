@@ -87,7 +87,7 @@ body{
     flex-wrap: wrap;
 }
 .date:hover{
-    animation: testo;
+    animation-name: testo;
 }
 .date-container{
     font-weight: 100;
@@ -140,7 +140,7 @@ body{
 }
 
 .current-info .others:hover{
-  animation: testo;
+  animation-name: testo;
 }
 
 .current-info .others .weather-item{
@@ -306,6 +306,11 @@ body{
  
    
 }
+@keyframes testo{
+    to{
+        font-size: 110%;
+    }
+}
 
 #current-weather-items{
  width: 100%;
@@ -316,10 +321,6 @@ body{
  width: 80px
 }
 
-@keyframes testo{
-    to{
-        font-size: 110%;
-    }
-}
+
 
 
