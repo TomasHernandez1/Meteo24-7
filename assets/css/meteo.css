@@ -89,7 +89,18 @@ body{
 .date-container{
     font-weight: 100;
     width: 20%;
-    transition: transform 1s ease;
+    transition: transform 2s ease;
+}
+.date-container:hover{
+    font-size:120%;
+    width:22%
+}
+.date{
+    transition: transform 2s ease;
+}
+.date:hover{
+    font-size:120%;
+    width:22%
 }
   
 .date-container .time{
@@ -136,11 +147,6 @@ body{
     margin: 10px 0;
     border: 1px solid #eee;
     height: 95%;
-}
-
-.date-container:hover{
-    font-size:120%;
-    width:22%
 }
 
 .current-info .others .weather-item{
