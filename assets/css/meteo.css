@@ -126,7 +126,7 @@ body{
     font-weight: 700;
 }
 
-.current-info .others::before{
+.current-info .others{
     display: flex;
     flex-direction: column;
     background: rgba(24,24,27, 0.6);
@@ -138,7 +138,7 @@ body{
     transition: transform 0.5 ease;
 }
 
-.current-info .others:hover::before{
+.current-info .others:hover{
     width: 110%;
     height: 100%;
 }
