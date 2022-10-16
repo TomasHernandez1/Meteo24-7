@@ -224,7 +224,10 @@ body{
 
 
 @media only screen and  (max-width:1000px){
-    
+    *{
+         transition: none !important; 
+     }
+ 
     .container{
         padding: 20px;
     }
@@ -271,7 +274,6 @@ body{
  
     .date-container{
         width: 100%;
-        transition: none !important; 
     } 
  
     ::-webkit-scrollbar{
@@ -290,6 +292,10 @@ body{
 }
 
 @media only screen and (max-width: 400px){
+    *{
+         transition: none !important; 
+     }
+ 
     .future-forecast{
         justify-content: start;
         align-items: none;
@@ -303,7 +309,6 @@ body{
  
     .date-container{
         width: 100%;
-        transition: none !important; 
     } 
  
     ::-webkit-scrollbar{
