@@ -74,7 +74,7 @@ body {
 
 .btn:hover{
   opacity: 0.8;
-  animation: press infinite ease;
+  animation: press ease;
 }
 
 #foot{
@@ -101,6 +101,6 @@ body {
 
 @keyframes press{
   to{
-    width: 13%;
+    width: 10%;
   }  
 }
