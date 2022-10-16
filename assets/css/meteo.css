@@ -298,7 +298,6 @@ body{
         align-items: none;
         overflow-x: scroll;
         overflow-y: clip;
-        width: 200%
     }
  
     #current-weather-item{
@@ -323,9 +322,14 @@ body{
         width: 100%
     }
     .future-forecast .today{
-        width:150%
+        width:75%;
+        padding-right:0px;
+        padding-left:0px
     }
-   
+    .weather-forecast{
+        width:26% 
+    }
+    
 }
 
 #current-weather-items{
