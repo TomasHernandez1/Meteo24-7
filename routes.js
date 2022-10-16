@@ -277,7 +277,7 @@ router.post('/meteo', async (req,res) => {
     } catch (err) {
       console.log("Errore nel Geocoding API Call")
       res.render('meteo', {
-        city: null,
+        city: "Something went wrong with weather!",
         temp: null,
         timezone: null,
         description: null,
@@ -329,7 +329,7 @@ router.post('/meteo', async (req,res) => {
           .then(data => {
             if(data.message === 'city not found' || data.message === 'wrong latitude' || data.message === 'wrong longitude'){
               res.render('meteo', {
-                city: data.message,
+                city: "Something went wrong with weather!",
                 temp: null,
                 timezone: null,
                 description: null,
