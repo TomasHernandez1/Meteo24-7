@@ -275,6 +275,10 @@ body{
     .date-container{
         width: 100%;
     } 
+    .date-container:hover{
+        width: 100%;
+        font-size:100%
+    } 
  
     ::-webkit-scrollbar{
      width:0px;
@@ -309,6 +313,10 @@ body{
  
     .date-container{
         width: 100%;
+    } 
+    .date-container:hover{
+        width: 100%;
+        font-size:100%
     } 
  
     ::-webkit-scrollbar{
