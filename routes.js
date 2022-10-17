@@ -59,7 +59,7 @@ router.get('/meteo', async (req,res) => {
   } catch (err) {
     console.log("Errore chiamata GET e recupero location tramite IP")
     res.render("meteo", {
-      city: "Something went wrong with weather!",
+      city: data.message,
       temp: null,
       timezone: null,
       description: null,
@@ -111,7 +111,7 @@ router.get('/meteo', async (req,res) => {
         .then(data => {
           if(data.message === 'city not found' || data.message === 'wrong latitude' || data.message === 'wrong longitude'){
             res.render('meteo', {
-              city: "Something went wrong with weather!",
+              city: data.message,
               temp: null,
               timezone: null,
               description: null,
@@ -175,7 +175,7 @@ router.get('/meteo', async (req,res) => {
               description: data.current.weather[0].description,
               humidity: data.current.humidity,
               wind: data.current.wind_speed,
-              imgsrc: "https://openweathermap.org/img/w/" + data.current.weather[0].icon + ".webp",
+              imgsrc: "https://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png",
               aq: index[aq-1],
               min: data.daily[0].temp.min,
               max: data.daily[0].temp.max,
@@ -189,15 +189,13 @@ router.get('/meteo', async (req,res) => {
               max4: data.daily[4].temp.max,              
               min5: data.daily[5].temp.min,
               max5: data.daily[5].temp.max,
-              min6: data.daily[6].temp.min,
-              max6: data.daily[6].temp.max,
-              imgtoday: "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".webp",
-              imgtom: "https://openweathermap.org/img/w/" + data.daily[1].weather[0].icon + ".webp",
-              imgdayafter: "https://openweathermap.org/img/w/" + data.daily[2].weather[0].icon + ".webp",
-              imgday3: "https://openweathermap.org/img/w/" + data.daily[3].weather[0].icon + ".webp",
-              imgday4: "https://openweathermap.org/img/w/" + data.daily[4].weather[0].icon + ".webp",
-              imgday5: "https://openweathermap.org/img/w/" + data.daily[5].weather[0].icon + ".webp",
-              imgday6: "https://openweathermap.org/img/w/" + data.daily[6].weather[0].icon + ".webp",             
+              imgtoday: "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".png",
+              imgtom: "https://openweathermap.org/img/w/" + data.daily[1].weather[0].icon + ".png",
+              imgdayafter: "https://openweathermap.org/img/w/" + data.daily[2].weather[0].icon + ".png",
+              imgday3: "https://openweathermap.org/img/w/" + data.daily[3].weather[0].icon + ".png",
+              imgday4: "https://openweathermap.org/img/w/" + data.daily[4].weather[0].icon + ".png",
+              imgday5: "https://openweathermap.org/img/w/" + data.daily[5].weather[0].icon + ".png",
+              imgday6: "https://openweathermap.org/img/w/" + data.daily[6].weather[0].icon + ".png",             
               unsplash: backgroundLink,
               day1: days[(date.getDay()) % 7],
               day2: days[(date.getDay() + 1) % 7],
@@ -205,7 +203,8 @@ router.get('/meteo', async (req,res) => {
               day4: days[(date.getDay() + 3) % 7],
               day5: days[(date.getDay() + 4) % 7],
               day6: days[(date.getDay() + 5) % 7],
-              day7: days[(date.getDay() + 6) % 7],                           
+              day7: days[(date.getDay() + 6) % 7],              
+              
               feels: data.current.feels_like, 
               sunrise: (sunrise.getHours()+2) + ":" + sunrmin,
               sunset: (sunset.getHours()+2) + ":" + sunsmin
@@ -277,7 +276,7 @@ router.post('/meteo', async (req,res) => {
     } catch (err) {
       console.log("Errore nel Geocoding API Call")
       res.render('meteo', {
-        city: "Something went wrong with weather!",
+        city: data.message,
         temp: null,
         timezone: null,
         description: null,
@@ -329,7 +328,7 @@ router.post('/meteo', async (req,res) => {
           .then(data => {
             if(data.message === 'city not found' || data.message === 'wrong latitude' || data.message === 'wrong longitude'){
               res.render('meteo', {
-                city: "Something went wrong with weather!",
+                city: data.message,
                 temp: null,
                 timezone: null,
                 description: null,
@@ -393,7 +392,7 @@ router.post('/meteo', async (req,res) => {
                 description: data.current.weather[0].description,
                 humidity: data.current.humidity,
                 wind: data.current.wind_speed,
-                imgsrc: "https://openweathermap.org/img/w/" + data.current.weather[0].icon + ".webp",
+                imgsrc: "https://openweathermap.org/img/w/" + data.current.weather[0].icon + ".png",
                 aq: index[aq-1],
                 min: data.daily[0].temp.min,
                 max: data.daily[0].temp.max,
@@ -407,15 +406,13 @@ router.post('/meteo', async (req,res) => {
                 max4: data.daily[4].temp.max,              
                 min5: data.daily[5].temp.min,
                 max5: data.daily[5].temp.max,
-                min6: data.daily[6].temp.min,
-                max6: data.daily[6].temp.max,
-                imgtoday: "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".webp",
-                imgtom: "https://openweathermap.org/img/w/" + data.daily[1].weather[0].icon + ".webp",
-                imgdayafter: "https://openweathermap.org/img/w/" + data.daily[2].weather[0].icon + ".webp",
-                imgday3: "https://openweathermap.org/img/w/" + data.daily[3].weather[0].icon + ".webp",
-                imgday4: "https://openweathermap.org/img/w/" + data.daily[4].weather[0].icon + ".webp",
-                imgday5: "https://openweathermap.org/img/w/" + data.daily[5].weather[0].icon + ".webp",
-                imgday6: "https://openweathermap.org/img/w/" + data.daily[6].weather[0].icon + ".webp",             
+                imgtoday: "https://openweathermap.org/img/w/" + data.daily[0].weather[0].icon + ".png",
+                imgtom: "https://openweathermap.org/img/w/" + data.daily[1].weather[0].icon + ".png",
+                imgdayafter: "https://openweathermap.org/img/w/" + data.daily[2].weather[0].icon + ".png",
+                imgday3: "https://openweathermap.org/img/w/" + data.daily[3].weather[0].icon + ".png",
+                imgday4: "https://openweathermap.org/img/w/" + data.daily[4].weather[0].icon + ".png",
+                imgday5: "https://openweathermap.org/img/w/" + data.daily[5].weather[0].icon + ".png",
+                imgday6: "https://openweathermap.org/img/w/" + data.daily[6].weather[0].icon + ".png",             
                 unsplash: backgroundLink,
                 day1: days[(date.getDay()) % 7],
                 day2: days[(date.getDay() + 1) % 7],
@@ -423,7 +420,8 @@ router.post('/meteo', async (req,res) => {
                 day4: days[(date.getDay() + 3) % 7],
                 day5: days[(date.getDay() + 4) % 7],
                 day6: days[(date.getDay() + 5) % 7],
-                day7: days[(date.getDay() + 6) % 7],                             
+                day7: days[(date.getDay() + 6) % 7],              
+                
                 feels: data.current.feels_like, 
                 sunrise: (sunrise.getHours()+2) + ":" + sunrmin,
                 sunset: (sunset.getHours()+2) + ":" + sunsmin
