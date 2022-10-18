@@ -283,10 +283,3 @@ body{
     .weather-forecast{width:26%}
     
 }
-
-@media only screen and (max-height: 300px){
-    .place-container{
-        display: none
-    }
-}
-
