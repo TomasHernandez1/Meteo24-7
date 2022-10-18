@@ -85,12 +85,8 @@ body{
 .date-container{
     font-weight: 100;
     width: 20%;
-    transition: font-size 0.7s, width 0.7s
 }
-.date-container:hover{
-    font-size:120%;
-    width:22%
-} 
+
 .date-container .time{font-size: 70px}
 
 .date-container #am-pm{
@@ -148,13 +144,8 @@ body{
     justify-content: center;
     overflow-y: hidden;
     height: 30%;
-    transition: font-size 0.7s, height 0.7s
 }
 
-.future-forecast:hover{
-    height: 40%;
-    font-size: 100%
-}
 .future-forecast .today{
     display: flex;
     align-items: center;
