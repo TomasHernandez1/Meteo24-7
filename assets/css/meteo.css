@@ -100,7 +100,7 @@ body{
     text-align: end;
     display: flex;
     flex-direction: column;
-    background: rgba(24,24,27, 0.6);
+    background: #000000d0;
     padding:20px;
     border-radius: 10px;
     margin: 10px 0;
@@ -115,7 +115,7 @@ body{
 .current-info .others{
     display: flex;
     flex-direction: column;
-    background: rgba(24,24,27, 0.6);
+    background: #000000d0;
     padding: 20px;
     border-radius: 10px;
     margin: 10px 0;
@@ -127,7 +127,7 @@ body{
     justify-content: space-between
 }
 .future-forecast{
-    background: rgba(24,24,27,0.8);
+    background: #000000d0;
     padding: 25px;
     position: fixed;
     bottom: 0;
